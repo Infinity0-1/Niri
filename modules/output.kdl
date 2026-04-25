@@ -1,0 +1,64 @@
+
+output "eDP-1" {
+    scale 1;
+    mode "1920x1080@144";
+    transform "normal";
+    position x=0 y=0;
+    hot-corners { bottom-left; };
+}
+
+spawn-sh-at-startup "swaybg -m fill -i '/home/Abdelkader/Pictures/Wallpapers/All-devouring.jpg'"
+
+blur {
+    passes 1;
+    offset 1;
+    saturation 1.5;
+}
+
+window-rule {
+    background-effect { blur true; xray false; };
+    default-column-width {};
+    open-focused true;
+}
+
+window-rule {
+    match is-floating=true;
+    baba-is-float false;
+    max-height 600;
+    min-height 10;
+    max-width 1000;
+    min-width 10;
+}
+
+window-rule {
+    match is-focused=false;
+    opacity 0.8;
+}
+
+window-rule {
+    match is-focused=true;
+}
+
+window-rule {
+    match app-id="Alacritty";
+    match title="Helium";
+    default-column-width { fixed 1880; };
+    // default-column-width { fixed 1916; };
+}
+
+layer-rule {
+    match namespace="^wallpaper$";
+    background-effect { blur true; xray false; };
+    place-within-backdrop true;
+}
+
+layer-rule {
+    match layer="top";
+    match layer="overlay";
+    background-effect { blur true; xray false; };
+    opacity 0.91;
+}
+
+prefer-no-csd;
+screenshot-path null;
+hotkey-overlay { skip-at-startup; };

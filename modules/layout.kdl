@@ -1,0 +1,58 @@
+
+layout {
+    gaps 20;
+    background-color "transparent";
+    center-focused-column "never";
+    default-column-width {
+        proportion 0.5;
+    }
+
+    preset-column-widths {
+        proportion 0.8;
+        proportion 0.7;
+        proportion 0.5;
+        proportion 0.34;
+    }
+
+    focus-ring {
+        on;
+        width 1;
+        active-color "#666666";
+        inactive-color "#000000";
+    }
+
+    struts {
+        top 0;
+        right 0;
+        left 0;
+        bottom 0;
+    }
+
+    border {
+        off;
+        width 1;
+        active-color "#3A2A8A";
+        inactive-color "#1A1A6A";
+    }
+    
+    shadow {
+        off;
+        draw-behind-window false;
+        softness 1;
+        spread 1;
+        offset x=0 y=0;
+        color "#1D1D2D";
+    }
+
+    tab-indicator {
+        gap 0;
+        width 2;
+        length total-proportion=0.8;
+        position "bottom";
+        gaps-between-tabs 15;
+        corner-radius 20;
+        active-color "white";
+        inactive-color "black";
+        urgent-color "green";
+    }
+}
