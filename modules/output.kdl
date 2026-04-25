@@ -1,0 +1,67 @@
+output "eDP-1" {
+    scale 1;
+    mode "1920x1080@120";
+    transform "normal";
+    position x=0 y=0;
+    hot-corners { bottom-left; };
+}
+
+spawn-sh-at-startup "swaybg -m fill -i '/home/Abdelkader/Pictures/Wallpapers/blood-moon.png'"
+
+blur {
+    on
+    passes 3;
+    offset 2;
+    saturation 1.4;
+}
+
+window-rule {
+    background-effect { blur true; xray false; };
+    default-column-width {};
+    open-focused true;
+}
+
+window-rule {
+    match is-floating=true;
+    baba-is-float false;
+    max-height 1000;
+    max-width 1700;
+    min-height 50;
+    min-width 50;
+}
+
+window-rule {
+    match is-focused=false;
+    opacity 0.8;
+}
+
+window-rule {
+    match is-focused=true;
+}
+
+window-rule {
+    match title="Helium";
+    default-column-width { fixed 1840; };
+}
+
+window-rule {
+    match app-id="foot";
+    default-column-width { fixed 1840; };
+}
+
+layer-rule {
+    match namespace="^wallpaper$";
+    background-effect { blur true; xray false; };
+    place-within-backdrop true;
+}
+
+layer-rule {
+    match layer="top";
+    match layer="overlay";
+    background-effect { blur true; xray false; };
+    opacity 0.9;
+}
+
+prefer-no-csd;
+screenshot-path null;
+hotkey-overlay { skip-at-startup; };
