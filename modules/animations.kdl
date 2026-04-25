@@ -1,0 +1,47 @@
+animations {
+    slowdown 0.3;
+
+    workspace-switch {
+        curve "cubic-bezier" 1 1 0 1;
+    }
+
+    window-open {
+        curve "cubic-bezier" 1 1 0 1;
+    }
+
+    window-close {
+        curve "cubic-bezier" 1 1 0 1;
+    }
+
+    horizontal-view-movement {
+        curve "cubic-bezier" 1 1 0 1;
+    }
+
+    window-movement {
+        curve "cubic-bezier" 1 1 0 1;
+    }
+
+    window-resize {
+        curve "cubic-bezier" 1 1 0 1;
+    }
+
+    config-notification-open-close {
+        curve "cubic-bezier" 1 1 0 1;
+    }
+
+    exit-confirmation-open-close {
+        curve "cubic-bezier" 1 1 0 1;
+    }
+
+    screenshot-ui-open {
+        curve "cubic-bezier" 1 1 0 1;
+    }
+
+    overview-open-close {
+        curve "cubic-bezier" 1 1 0 1;
+    }
+
+    recent-windows-close {
+        curve "cubic-bezier" 1 1 0 1;
+    }
+}
