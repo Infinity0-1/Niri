@@ -1,0 +1,45 @@
+include "animations.kdl"
+include "background.kdl"
+include "binds.kdl"
+include "cursor.kdl"
+include "input.kdl"
+include "layout.kdl"
+include "output.kdl"
+
+blur { passes 4; offset 4; saturation 1.3; }; workspace "a"; workspace "b"; workspace "c";
+prefer-no-csd; screenshot-path null; hotkey-overlay { skip-at-startup; }
+
+window-rule { default-column-width {}; clip-to-geometry true; geometry-corner-radius 15;
+              background-effect { blur true; xray false; }; }
+
+window-rule { match app-id="Alacritty"; default-column-width { fixed 1800; }; open-on-workspace "a";
+              background-effect { xray true; }; }
+
+window-rule { match app-id="kitty"; default-column-width { fixed 1720; }; open-on-workspace "a";
+              background-effect { xray true; }; }
+
+window-rule { match app-id="obsidian"; default-column-width { fixed 1450; }; open-on-workspace "c"; open-floating true; }
+
+window-rule { match app-id="brave-browser"; default-column-width { fixed 1800; }; open-on-workspace "b"; }
+
+window-rule { match app-id="org.qutebrowser.qutebrowser"; default-column-width { fixed 1800; }; open-on-workspace "b";
+              background-effect { blur false; xray false; }; }
+
+window-rule { match app-id="helium"; default-column-width { fixed 1800; }; open-on-workspace "b";
+              background-effect { blur false; xray false; }; }
+
+window-rule { match app-id="zen"; default-column-width { fixed 1800; }; open-on-workspace "b"; }
+
+window-rule { match app-id="vivaldi-stable"; default-column-width { fixed 1800; }; open-on-workspace "b"; }
+
+window-rule { match app-id="org.telegram.desktop"; default-column-width { fixed 1080; }; open-on-workspace "b"; }
+              
+window-rule { match app-id="steam"; default-column-width { fixed 1440; }; open-on-workspace "c"; }
+
+window-rule { match app-id="Nautilus"; default-column-width { fixed 920; }; }
+
+layer-rule { match namespace="^wallpaper$"; place-within-backdrop true;
+             background-effect { xray false; blur false; }; }
+
+layer-rule { match layer="top"; match layer="overlay"; opacity 0.85;
+             background-effect { xray false; blur false; }; }

@@ -1,0 +1,18 @@
+input {
+    keyboard {
+        xkb {
+            layout "gb,us,ara"
+            options "grp:alt_space_toggle,caps:escape,altwin:swap_lalt_lwin"
+        }
+        track-layout "window"; repeat-delay 210; repeat-rate 70; 
+    }
+
+    touchpad { tap; dwt; dwtp; drag-lock; natural-scroll; accel-speed 0.4; scroll-method "two-finger"; }
+
+    mouse { accel-speed 0.4; }
+
+    trackpoint {
+        natural-scroll; accel-speed 0.4; scroll-method "on-button-down"; scroll-button 273;
+        scroll-button-lock; middle-emulation; }
+
+    warp-mouse-to-focus; focus-follows-mouse max-scroll-amount="30%"; }
