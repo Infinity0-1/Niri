@@ -1,0 +1,9 @@
+include "modules/animations.kdl"
+
+include "modules/binds.kdl"
+
+include "modules/input.kdl"
+
+include "modules/layout.kdl"
+
+include "modules/output.kdl"

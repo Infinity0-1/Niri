@@ -1,0 +1,49 @@
+animations {
+    slowdown 0.15;
+
+    workspace-switch {
+        spring damping-ratio=0.88 stiffness=1000 epsilon=0.1;
+    }
+
+    window-open {
+        duration-ms 1;
+        curve "ease-out-expo";
+    }
+
+    window-close {
+        duration-ms 0;
+        curve "ease-out-expo";
+    }
+
+    horizontal-view-movement {
+        spring damping-ratio=0.88 stiffness=1000 epsilon=0.01;
+    }
+
+    window-movement {
+        spring damping-ratio=0.88 stiffness=1000 epsilon=0.01;
+    }
+
+    window-resize {
+        spring damping-ratio=0.88 stiffness=1000 epsilon=0.01;
+    }
+
+    config-notification-open-close {
+        spring damping-ratio=0.6 stiffness=1000 epsilon=0.1;
+    }
+
+    exit-confirmation-open-close {
+        spring damping-ratio=0.6 stiffness=1000 epsilon=0.1;
+    }
+
+    screenshot-ui-open {
+        duration-ms 10; curve "ease-out-quad";
+    }
+
+    overview-open-close {
+        spring damping-ratio=0.88 stiffness=1000 epsilon=0.01;
+    }
+
+    recent-windows-close {
+        spring damping-ratio=0.88 stiffness=1000 epsilon=0.01;
+    }
+}
