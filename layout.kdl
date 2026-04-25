@@ -1,0 +1,23 @@
+layout {
+    gaps 16
+    center-focused-column "never"
+    background-color "transparent"
+    // always-center-single-column
+    // empty-workspace-above-first
+    preset-column-widths { proportion 0.8; proportion 0.71; proportion 0.5; proportion 0.35; }
+
+    default-column-width { proportion 0.55; }
+
+    focus-ring { off; width 1; active-color "#AAA2FA"; inactive-color "#000000"; }
+
+    border { off; width 1; active-color "#301040"; inactive-color "#000000"; }
+
+    shadow { off; draw-behind-window true; softness 2; spread 2; offset x=0 y=0; color "#1119"; }
+
+    struts { top 0; right 8; left 8; bottom 0; }
+
+    tab-indicator { 
+        gap 18; width 1; length total-proportion=0.7; position "top"; gaps-between-tabs 15;
+        corner-radius 10; active-color "white"; inactive-color "black"; urgent-color "green"; 
+    }
+}

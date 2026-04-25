@@ -1,0 +1,18 @@
+include "animations.kdl"
+include "background.kdl"
+include "binds.kdl"
+include "cursor.kdl"
+include "input.kdl"
+include "layout.kdl"
+include "output.kdl"
+
+prefer-no-csd; screenshot-path null; hotkey-overlay { skip-at-startup; }; blur { passes 0; offset 0; saturation 1; };
+
+window-rule { default-column-width {}; clip-to-geometry true; geometry-corner-radius 15
+            background-effect { blur true; xray false; }; }
+
+window-rule { match app-id="Alacritty"; default-column-width { fixed 1680; }; }
+window-rule { match app-id="Nautilus"; default-column-width { fixed 920; }; }
+
+layer-rule { match namespace="^wallpaper$"; place-within-backdrop true; }
+layer-rule { match layer="top"; match layer="overlay"; opacity 0.9; background-effect { xray false; blur true; }; }
